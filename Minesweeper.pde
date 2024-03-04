@@ -21,8 +21,7 @@ void setup ()
   for ( int r=0; r<NUM_ROWS; r++) {
     for (int c=0; c<NUM_COLS; c++) {
 
-      buttons[r][c]/*at appartment location r and c*/ = new MSButton(r, c); //a MSButton 
-      //lives there in that r c appartment
+      buttons[r][c] = new MSButton(r, c); 
     }
   }
   mines = new ArrayList <MSButton>();
@@ -39,7 +38,7 @@ public void setMines()
     int c = (int) (Math.random()*NUM_COLS );
     if ((mines.contains(buttons[r][c]))==false) {
       mines.add(buttons[r][c]);
-      System.out.println(r +"," +c);
+     
     }
   }
 }
